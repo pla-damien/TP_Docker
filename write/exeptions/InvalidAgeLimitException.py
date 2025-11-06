@@ -1,2 +1,3 @@
-class InvalidAgeLimitException():
+
+class InvalidAgeLimitException(Exception):
     pass
