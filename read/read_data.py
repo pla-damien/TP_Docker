@@ -40,10 +40,12 @@ def menu_recherche():
     print("2. Rechercher un film par age requis : ")
     print("3. Rechercher un film par genre : ")
     print("4. Rechercher un film par annee : ")
+    print("5. Sortir : ")
     choix = input("Tapez votre choix")
     match choix :
         case "1":
-            print(recherche_film_par_titre(list_film_csv(),"Parasite"))
+            titre = input("Saisissez votre titre : ")
+            print(recherche_film_par_titre(list_film_csv(),titre))
         case "2":
             choix = int(input("Saisir l'age requis : "))
             recherche_film_par_age_requis(list_film_csv(),choix)
@@ -54,6 +56,10 @@ def menu_recherche():
             debut = int(input("Saisir l'année de debut : "))
             fin = int(input("Saisir l'année de fin : "))
             recherche_film_par_année(list_film_csv(),debut,fin)
+        case "5":
+            return False
 
-menu_recherche()
+while menu_recherche():
+    pass
+
                   

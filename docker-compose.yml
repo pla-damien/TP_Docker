@@ -1,0 +1,23 @@
+services:
+  write:
+    container_name: front-python
+    build: 
+      context: ./write/
+      dockerfile: dockerfile
+    ports:
+      - 3400:3400
+    volumes: 
+      - data_volumes:/home/damien/data
+  
+  read:
+    container_name: back-python
+    build: 
+      context: ./read/
+      dockerfile: dockerfile
+    ports: 
+      - 3401:3401
+    volumes: 
+      - data_volumes:/home/damien/data
+
+volumes: 
+  data_volumes:
