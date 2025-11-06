@@ -28,12 +28,18 @@ def rechercher_film_par_genre(list_film,genre):
         if film[3] == genre :
                 print(film[1])
 
+def recherche_film_par_année(list_film,debut,fin):
+    for film in list_film:
+        if film[2].isdigit():
+            if int(film[2]) > debut and int(film[2]) < fin :
+                print(film[1])     
 
 
 def menu_recherche():
     print("1. Rechercher un film par titre : ")
     print("2. Rechercher un film par age requis : ")
     print("3. Rechercher un film par genre : ")
+    print("4. Rechercher un film par annee : ")
     choix = input("Tapez votre choix")
     match choix :
         case "1":
@@ -44,6 +50,10 @@ def menu_recherche():
         case "3":
             choix = input("Saisir le genre : ")
             rechercher_film_par_genre(list_film_csv(),choix)
+        case "4":
+            debut = int(input("Saisir l'année de debut : "))
+            fin = int(input("Saisir l'année de fin : "))
+            recherche_film_par_année(list_film_csv(),debut,fin)
 
 menu_recherche()
                   
