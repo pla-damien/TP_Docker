@@ -151,7 +151,7 @@ Saisie OK :
 
 ## 🧑‍💻 Auteur
 
-**Nom :** _[à compléter]_  
+**Nom :** Damien PLA 
 **Projet :** Gestionnaire de films Python  
 **Licence :** Libre / Open Source
 
